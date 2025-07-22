@@ -46,11 +46,11 @@ module.exports = {
       filename: "remoteEntry.js",
       remotes: {
           LoginPage: "loginPage@http://localhost:3000/remoteEntry.js",
-          // LeftNav: "leftNavigation@http://localhost:3001/remoteEntry.js",
+          // LeftNav: "leftNavigation@https://cleanui0011.github.io/mf-left-navs/remoteEntry.js",
           TopNav: "topNavigation@http://localhost:3002/remoteEntry.js",
           ItemDetails: "itemDetails@http://localhost:3003/remoteEntry.js",
-          Shell: "shell@http://localhost:3004/remoteEntry.js",
-          SharedModules: "sharedModules@http://localhost:3005/remoteEntry.js",
+          Shell: "shell@https://cleanui0011.github.io/mf-shell/remoteEntry.js",
+          SharedModules: "sharedModules@https://cleanui0011.github.io/mf-shared-modules/remoteEntry.js",
       },
       exposes: {
          "./store": "./src/redux/store.js"

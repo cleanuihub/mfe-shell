@@ -46,8 +46,8 @@ module.exports = {
       filename: "remoteEntry.js",
       remotes: {
           LoginPage: "loginPage@http://localhost:3000/remoteEntry.js",
-          // LeftNav: "leftNavigation@https://cleanui0011.github.io/mf-left-navs/remoteEntry.js",
-          TopNav: "topNavigation@http://localhost:3002/remoteEntry.js",
+          // LeftNav: "leftNavigation@https://cleanui0011.github.io/mf-left-nav/remoteEntry.js",
+          TopNav: "topNavigation@https://cleanui0011.github.io/mf-top-nav/remoteEntry.js",
           ItemDetails: "itemDetails@http://localhost:3003/remoteEntry.js",
           Shell: "shell@https://cleanui0011.github.io/mf-shell/remoteEntry.js",
           SharedModules: "sharedModules@https://cleanui0011.github.io/mf-shared-modules/remoteEntry.js",

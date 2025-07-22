@@ -75,8 +75,9 @@ module.exports = {
       }
     }),
     new WorkboxPlugin.GenerateSW({
-    clientsClaim: true,
-    skipWaiting: true,
-  }),
+      clientsClaim: true,
+      skipWaiting: true,
+      maximumFileSizeToCacheInBytes: 10 * 1024 * 1024, // 10 MB if needed
+    }),
   ],
 };

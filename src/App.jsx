@@ -14,7 +14,7 @@ const LoginComponent = React.lazy(() => import("LoginPage/LoginPage"));
 export default function AppShell() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <BrowserRouter>
+      <BrowserRouter basename="/mf-shell">
         <ShellLayout />
       </BrowserRouter>
     </Suspense>

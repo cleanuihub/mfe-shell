@@ -2,23 +2,18 @@ name: Deploy Shell App
 
 on:
   push:
-    paths:
-      - 'wp5-mf-shell-main/**'
     branches:
       - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: wp5-mf-shell-main
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18

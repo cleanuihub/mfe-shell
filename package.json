@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://Sufiyankhan0011.github.io/microFED/wp5-mf-shell-main",
+  "homepage": "https://cleanui0011.github.io/mf-shell",
   "scripts": {
     "start": "webpack serve --mode development",
     "build": "webpack --mode production",

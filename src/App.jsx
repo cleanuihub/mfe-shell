@@ -12,6 +12,34 @@ const ItemDetailsComponent = React.lazy(() => import("ItemDetails/ItemDetails"))
 const LoginComponent = React.lazy(() => import("LoginPage/LoginPage"));
 
 export default function AppShell() {
+  
+  useEffect(() => {
+  const handleInstallPrompt = (e) => {
+    e.preventDefault();
+    window.deferredPrompt = e;
+
+    const installBtn = document.createElement('button');
+    installBtn.innerText = 'Install App';
+    installBtn.style = 'position: fixed; bottom: 20px; right: 20px; padding: 10px; background: #efc23b; border: none; cursor: pointer; z-index: 9999;';
+    document.body.appendChild(installBtn);
+
+    installBtn.addEventListener('click', async () => {
+      if (window.deferredPrompt) {
+        window.deferredPrompt.prompt();
+        const { outcome } = await window.deferredPrompt.userChoice;
+        if (outcome === 'accepted') {
+          console.log('User accepted install prompt');
+        }
+        window.deferredPrompt = null;
+        installBtn.remove();
+      }
+    });
+  };
+
+  window.addEventListener('beforeinstallprompt', handleInstallPrompt);
+  return () => window.removeEventListener('beforeinstallprompt', handleInstallPrompt);
+}, []);
+
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <BrowserRouter basename="/mf-shell">

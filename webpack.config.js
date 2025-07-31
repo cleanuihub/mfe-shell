@@ -10,9 +10,9 @@ module.exports = {
   entry: "./src/index.js",
   mode: "development",
   output: {
-    publicPath: 'https://cleanui0011.github.io/mf-shell/',
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.js',
+    publicPath: "/mf-shell/",
   },
   devServer: {
     port: 3004,

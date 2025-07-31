@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 const WorkboxPlugin = require("workbox-webpack-plugin");
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -78,6 +79,12 @@ module.exports = {
       clientsClaim: true,
       skipWaiting: true,
       maximumFileSizeToCacheInBytes: 10 * 1024 * 1024, // 10 MB if needed
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: "public/manifest.json", to: "manifest.json" },
+        { from: "public/icons", to: "icons" },
+      ],
     }),
   ],
 };

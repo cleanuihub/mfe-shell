@@ -42,7 +42,7 @@ export default function AppShell() {
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <BrowserRouter basename="/mf-shell">
+      <BrowserRouter basename="/mfe-shell">
         <ShellLayout />
       </BrowserRouter>
     </Suspense>

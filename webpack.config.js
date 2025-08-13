@@ -55,7 +55,7 @@ module.exports = (env, argv) => {
           // LeftNav: "leftNavigation@https://cleanui0011.github.io/mf-left-nav/remoteEntry.js",
           TopNav: "topNavigation@https://cleanui0011.github.io/mf-top-nav/remoteEntry.js",
           ItemDetails: "itemDetails@https://cleanui0011.github.io/mf-item-details/remoteEntry.js",
-          Shell: "shell@https://cleanuihub.github.io/mfe-shell/remoteEntry.js",
+          // Shell: "shell@https://cleanuihub.github.io/mfe-shell/remoteEntry.js",
           SharedModules: "sharedModules@https://cleanui0011.github.io/mf-shared-modules/remoteEntry.js",
         },
         exposes: {

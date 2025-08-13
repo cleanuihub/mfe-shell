@@ -1,8 +1,8 @@
 import("./bootstrap.js");
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./service-worker.js')
-      .then(reg => console.log('SW registered: ', reg))
-      .catch(err => console.log('SW registration failed: ', err));
+    const base = process.env.NODE_ENV === 'production' ? '/mfe-shell' : '';
+    navigator.serviceWorker.register(`${base}/service-worker.js`)
+      .catch((e) => console.error('SW registration failed', e));
   });
 }

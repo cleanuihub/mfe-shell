@@ -1,6 +1,6 @@
 import React from "react";
 import {createRoot} from "react-dom/client";
-import { StoreProvider } from 'Shell/store'
+import { StoreProvider } from './redux/store'
 
 import Main from "./App.jsx";
 
